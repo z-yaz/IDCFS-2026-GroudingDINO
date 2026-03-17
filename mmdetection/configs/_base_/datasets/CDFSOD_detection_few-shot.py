@@ -1,84 +1,25 @@
 # dataset settings
 dataset_type = 'CocoDataset'
 
-############ on pub dataset ##############
-# data_root = '../data/ArTaxOr/'
-
-# metainfo = dict(
-# classes = (
-#     "Araneae",
-#     "Coleoptera",
-#     "Diptera",
-#     "Hemiptera",
-#     "Hymenoptera",
-#     "Lepidoptera",
-#     "Odonata",
-# )
-# )
-# data_root = '../data/clipart1k/'
-
-# metainfo = dict(
-# classes = (
-#     "sheep",
-#     "chair",
-#     "boat",
-#     "bottle",
-#     "diningtable",
-#     "sofa",
-#     "cow",
-#     "motorbike",
-#     "car",
-#     "aeroplane",
-#     "cat",
-#     "train",
-#     "person",
-#     "bicycle",
-#     "pottedplant",
-#     "bird",
-#     "dog",
-#     "bus",
-#     "tvmonitor",
-#     "horse"
-# )
-# )
-
-# data_root = '../data/FISH/'
-
-# metainfo = dict(
-# classes = (
-#     "fish",
-# )
-# )
-
-
-############ on pub dataset ##############
-
 ########### on unsee dataset ##############
-# data_root = '../data/dataset1/'
+data_root = '../data/dataset1/' 
 # data_root = '../data/dataset2/'
 # data_root = '../data/dataset3/'
-# data_root = '../data/dataset3_augmented/'
 
-# metainfo = dict(
-# classes = ("Araneae", "Coleoptera", "Diptera", "Hemiptera", "Hymenoptera", "Lepidoptera", "Odonata") # ArTaxOr
-# )
+metainfo = dict(classes = ("holothurian", "echinus", "scallop", "starfish", "fish", "corals", "diver", "cuttlefish", "turtle", "jellyfish")) # dataset1 
 
-# metainfo = dict(
-# classes = ("apple", "avocado", "capsicum", "mango", "orange", "rockmelon", "strawberry") ## dataset1
-# )
+# metainfo = dict(classes = ("car") ) ## dataset2
 
-# metainfo = dict(
-# classes = ("car") ## dataset2
-# )
-
-# metainfo = dict(
-# classes = ("dent", "scratch", "crack", "glass shatter", "lamp broken", "tire flat") ## dataset3
-# )
+# metainfo = dict(classes = ("dent", "scratch", "crack", "glass shatter", "lamp broken", "tire flat") ) ## dataset3
 ########### on unsee dataset ##############
 
-# train_ann_file = 'annotations/1_shot.json'
-train_ann_file = 'annotations/5_shot.json'
-# train_ann_file = 'annotations/10_shot.json'
+
+
+train_ann_file = 'annotations/1_shot.json'  
+# train_ann_file = 'annotations/5_shot.json'  
+# train_ann_file = 'annotations/10_shot.json' 
+
+
 
 
 
@@ -334,7 +275,8 @@ val_dataloader = dict(
         type=dataset_type,
         data_root=data_root,
         # ann_file='annotations/10_shot.json',
-        ann_file='annotations/test.json',
+        # ann_file='annotations/test.json', 
+        ann_file='annotations/test.json', 
         data_prefix=dict(img='test/'),
         test_mode=True,
         metainfo=metainfo,
