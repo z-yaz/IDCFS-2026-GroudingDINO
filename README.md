@@ -52,7 +52,7 @@ We propose a method that integrates **Qwen-based generative augmentation for Gro
 
 Our method addresses the CDFSOD challenge through a domain-adaptive hybrid strategy. 
 
-For Dataset 2 (a multi-object natural domain with vehicles), we identify that only a single instance is labeled per image despite the presence of multiple targets. To prevent the model from treating unlabeled vehicles as background, we employ a GLIP-based pseudo-labeling pipeline to recover missing annotations, followed by iterative self-training to achieve dense and robust object localization. Refer to [GLIP-Repository](https://github.com/Pumpkinder/CDFSOD.git)  .
+For Dataset 2 (a multi-object natural domain with vehicles), we identify that only a single instance is labeled per image despite the presence of multiple targets. To prevent the model from treating unlabeled vehicles as background, we employ a GLIP-based pseudo-labeling pipeline to recover missing annotations, followed by iterative self-training to achieve dense and robust object localization. Refer to [GLIP-Repository](https://github.com/Jywsuperman/NTIRE_2026_CDFSOD).
 
 
 For Dataset 1\&3, we leverage the Qwen to synthesize generative data, enriching the feature space for GroundingDINO.  Implementation details are given as follows.
