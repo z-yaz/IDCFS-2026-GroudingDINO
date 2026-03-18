@@ -49,7 +49,6 @@ We propose a method that integrates **Qwen-based generative augmentation for Gro
 ---
 
 
-## 🛠️ Environment Setup
 
 Our method addresses the CDFSOD challenge through a domain-adaptive hybrid strategy. 
 
